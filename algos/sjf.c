@@ -55,24 +55,15 @@ void sortProcesses(int processes[], int n, int bt[]) {
 
 int main() {
     int n;
-
-    // User input for number of processes
     printf("Enter the number of processes: ");
     scanf("%d", &n);
-
     int processes[n], burst_time[n];
-
-    // User input for process IDs and burst times
     for (int i = 0; i < n; i++) {
         processes[i] = i + 1; // Assign process ID starting from 1
         printf("Enter burst time for process %d: ", processes[i]);
         scanf("%d", &burst_time[i]);
     }
-
-    // Sorting processes based on burst time for SJF
     sortProcesses(processes, n, burst_time);
-
     findAvgTime(processes, n, burst_time);
-
     return 0;
 }
